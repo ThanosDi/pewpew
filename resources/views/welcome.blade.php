@@ -41,7 +41,7 @@
 
              <div class="row">
                 <div class="col-md-4 col-centered">
-                    <p>If you don't have an account you can <a href="{{ URL::to('register') }}">register here</a></p>
+                    <p>If you don't have an account you can <a href="{{ URL::to('register') }}"><b>register here</b></a></p>
                 </div>
             </div>
 
