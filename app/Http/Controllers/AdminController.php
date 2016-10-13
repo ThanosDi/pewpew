@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-
+use App\User;
 class AdminController extends Controller
 {
     /**
@@ -16,7 +16,9 @@ class AdminController extends Controller
     public function index()
     {
         //Return languages to welcome view
-         return view('admin.index',compact('language') );
+         $admintitle = 'Admin Home';
+        //Return languages to welcome view
+        return view('admin.index',compact('admintitle') );//compact('languages')
     }
 
     /**
@@ -24,9 +26,13 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function listAccounts()
     {
-        //
+        $admintitle = 'Admin List Accounts';
+
+        $users = User::all()->sortBy("email");;
+        //Return languages to welcome view
+        return view('admin.accounts.listaccounts',compact('admintitle','users') );//compact('languages')
     }
 
     /**

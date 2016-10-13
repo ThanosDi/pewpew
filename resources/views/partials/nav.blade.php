@@ -5,12 +5,6 @@
 		</div>
 	
 		<div class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-			{{-- 	@foreach ($languages as $key => $language)                       
-                         {{-- <a href="language/{{$language->id}}">{{$language->name}}</a>                         --}}
-                         {{-- <li class="{{ Request::path() == 'language/'.$language->id ? 'active' : '' }}"> <a href="{{action('LanguageController@show',[$language->id])}}">{{$language->name}}</a></li> --}}
-                 {{--   @endforeach --}}
-			</ul> 
 			<ul class="nav navbar-nav navbar-right">
 				@if (!Auth::guest())
 				<li  class="{{ Request::path() == 'admin' ? 'active' : '' }}"><a href="{{action('AdminController@index')}}">Admin</a></li>				

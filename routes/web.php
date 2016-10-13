@@ -21,8 +21,10 @@ Route::get('contact','PagesController@contact');
 
 
 /* Admin Routes */
-
 Route::get('/admin', 'AdminController@index');
+
+//Admin accounts
+Route::get('/admin/accounts/list', 'AdminController@listAccounts');
 
 /* Login-Logout-Register */
 

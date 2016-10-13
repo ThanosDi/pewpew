@@ -1,8 +1,8 @@
 @extends('layouts.masteradmin')
-@section('pageTitle', 'Admin Panel')
+@section('pageTitle', $admintitle)
 @section('contentadmin')
-<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-
+{{-- <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script> --}}
+<div class="col-md-10">
 	<form>
 		 <div class="form-group">
 		    <label for="title">Title</label>
@@ -16,6 +16,7 @@
 		</div>
 	</form>
 	<script>
-    CKEDITOR.replace( 'article-ckeditor' );
+    //CKEDITOR.replace( 'article-ckeditor' );
 </script>
+</div>
 @endsection

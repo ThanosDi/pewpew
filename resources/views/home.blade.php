@@ -15,18 +15,5 @@
 			</div>
 		</div>
 	</div>
-	{{-- <h1>Or here for a card</h1>
-	<hr>
-
-	<input type="text" name="livesearch"  class="form-control" placeholder="Search goddamit" ng-model="livesearch" />
-
-	<div class="row">
-		<div class="col-md-12 cards">
-			<div class="col-md-4 card" ng-repeat="card in fullcards | filter :{name:livesearch}">
-				<h2>@{{card.name}}</h2>
-				<img src="@{{card.imageUrl}}"/>
-			</div>
-		</div>
-	</div> --}}
 </div>
 @endsection
