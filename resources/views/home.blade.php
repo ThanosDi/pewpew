@@ -1,0 +1,32 @@
+@extends('layouts.master')
+@section('pageTitle', $hometitle)
+@section('content')
+<script type="text/javascript" src="{{URL::asset('js/angapp.js')}}"></script>
+<div class="container" ng-app="myApp" ng-controller="MovieController">
+	<div class="title m-b-md row">
+		<h1>Search for a card</h1>
+		<hr>
+		<input type="text" name="search"  class="form-control" placeholder="Search goddamit" ng-model="search" ng-model-options="{ debounce: 300 }"/>
+
+		<div class="col-md-12 cards">
+			<div class="col-md-4 card" ng-repeat="card in cards">
+				<h2>@{{card.name}} (@{{card.power}})</h2>
+				<img src="@{{card.imageUrl}}"/>
+			</div>
+		</div>
+	</div>
+	{{-- <h1>Or here for a card</h1>
+	<hr>
+
+	<input type="text" name="livesearch"  class="form-control" placeholder="Search goddamit" ng-model="livesearch" />
+
+	<div class="row">
+		<div class="col-md-12 cards">
+			<div class="col-md-4 card" ng-repeat="card in fullcards | filter :{name:livesearch}">
+				<h2>@{{card.name}}</h2>
+				<img src="@{{card.imageUrl}}"/>
+			</div>
+		</div>
+	</div> --}}
+</div>
+@endsection
