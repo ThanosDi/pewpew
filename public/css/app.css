@@ -5905,3 +5905,6 @@ html, body {
   max-height: 100%; /* not to stand out from div */
   margin: auto auto 0; /* position to bottom and center */
 }
+.cards .card h2 span{
+  color:orange;
+}
